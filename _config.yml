@@ -1,7 +1,5 @@
 # Site settings
 title: J
-description: > # this means to ignore newlines until "baseurl:"
-Programmer in training, just about to graduate from the LSE and head off to the Recurse Center!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "jkiely.co.uk"
 
