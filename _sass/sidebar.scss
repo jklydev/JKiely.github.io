@@ -6,3 +6,23 @@
     margin-bottom: -5000px;
     padding-bottom: 5000px;
 }
+
+.site-title {
+    font-size: 300px;
+    line-height: 300px;
+    &:visited {
+        color: white;
+    }
+}
+
+.site-nav {
+    font-size: 30px;
+    
+    .about a {
+        color: white;
+    }
+    .github a {
+        color: white;
+    }
+}
+
