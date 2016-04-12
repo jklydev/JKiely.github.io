@@ -1,10 +1,17 @@
 .side-bar {
-    position: fixed;
-    float: left;
-    width: 300px;
+    text-align: center;
+    padding: 2rem 1rem;
     background-color: black;
-    margin-bottom: -5000px;
-    padding-bottom: 5000px;
+}
+
+@media (min-width: 48em) {
+    .side-bar {
+        position: fixed;
+        float: left;
+        width: 300px;
+        margin-bottom: -5000px;
+        padding-bottom: 5000px;
+    }
 }
 
 .site-title {
