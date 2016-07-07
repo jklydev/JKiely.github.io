@@ -1,4 +1,4 @@
-I've always liked Peter Norvig's writing (who doesn't?) and I came across his (spellcheck)[http://norvig.com/spell-correct.html] article at just the right time as I was looking for a small project to keep be busy and sharpen my python before RC starts.
+I've always liked Peter Norvig's writing (who doesn't?) and I came across his [spellcheck](http://norvig.com/spell-correct.html) article at just the right time as I was looking for a small project to keep be busy and sharpen my python before RC starts.
 
 So my first step was to go though and build it as it was in the article, which was relatively straight forward. I was expecting there to be some problems with using python 3, but it all went smoothly. While the code was a little less explicit at some points than I like to be, I read through the article as I wrote it and it was all simple enough. Since I knew I wanted to modify and extend it I also took the time to add unit tests with pytest.
 
