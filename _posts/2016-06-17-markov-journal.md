@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 So for a while now I've been keeping a journal using Emacs Org Journal, mostly to chronicle various ideas and to shout at myself. I've had a few problems with it, but I'm mostly quite satisfied, and in contrast to my previous journal tools I love having everything easily accessible in plain text. In fact I was inspired by a friends project to take advantage of this accessibility and use it as a corpus to try and generate automatic journal-like sentences. I thought this project might teach me a little bit about myself, but I was apprehensive since whatever it would teach me was likely to be *horrifically* depressing.
 
 So I thought I'd start out with a simple bigram Markov model. And while I know there are plenty of libraries that implement this for me I've never worked with these kind of things before so I wanted to implement it myself in order to learn more about them. This was my first attempt:

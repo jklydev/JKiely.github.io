@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 Week three was a bit more scattered that the previous two, the bittorrent group all got a bit distracted by other things and in the absence of that I mostly worked on solo projects. Naturally this led to me being a bit less productive that I otherwise would have been, but I did give me a chance to think more about what I want to work on.
 
 I need to move away from working on things I find in articles and tutorials and build more original things, or at least implement things my own way. When I do work from tutorials, such as the Go weather server, I should also make at effort to expand the final product into something I can present as at least partly my own. This was especially hammered in when I worked on my CV and had to look for code examples. Everything I had was either from a tutorial or half finished. I need to spend some of my solo project time finishing up a few things so that I have code samples to present.

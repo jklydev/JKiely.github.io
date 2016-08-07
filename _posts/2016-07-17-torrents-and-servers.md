@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 So the second week has come to a close, and it's been dominated by two projects: writing a bittorrent client and writing a server. This two projects however have both been dominated by the same thing: Reading documentation! That doesn't mean however they haven't been interesting. Bittorrent has especially been a challenge as I've never worked to implement something from a spec before, nor have I really worked like this in a group.
 
 It's been a bit of hassle, mostly revolving around not knowing exactly what our inputs and out puts should look like, and not understanding why connections are failing. For example, our first attempts to connect to the tracker all failed, but we had no way if knowing if this was our request being formatted incorrectly, or some other issue. We just saw 404s. Right now I'm having the same problem connecting to peers, I think I'm following the spec exactly but no response. Am I misunderstanding something or am I just getting bad luck with unresponsive peers? Still, working though it with people has been a lot more educational than doing it alone would have been. Talking though the problems leads to faster solutions, and talking though the spec leads to interesting perspectives on it that wouldn't have occurred to me. I'm eager to get though our current road block with the peers, as the whole project should open up after that.

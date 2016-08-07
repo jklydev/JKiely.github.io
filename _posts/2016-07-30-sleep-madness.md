@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 So this week has been a wash of sleep madness. The insomnia started hitting around the weekend and I've just been getting steadily worn down all week, sleeping for an hour or two a day and becoming more and more inured to caffeine as I try to force though. I managed to get a whole five hours this morning though so hopefully it's coming to an end?
 
 The only progress I made this week has been working though a Haskell tutorial (so much for making something original...) and that's been interesting. So far the text book has been alright, none of the ideas it's presenting are really new to me so it's mostly just been learning a new syntax. I'm just trying to get far enough in that I can start building my own things with it, hopefully starting with a sudoku solver, in order to really get a grasp of the language.

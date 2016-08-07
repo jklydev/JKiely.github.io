@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 Memento Mori and Rhetorical Balls
 ==================================
 

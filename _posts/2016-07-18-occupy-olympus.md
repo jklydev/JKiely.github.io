@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 It's been a few year since I last read The Iliad, but I still think about the book a lot. It's central conflict between living a long leisurely life for which you are hardly remembered, or living a short brutal one that may grant you "Kleos Aphthiton"<sup>[1]</sup> really caught my interest when I first read it and never really let go.
 
 Still, another feature of the book that grabbed me was just how damn capitalist the gods are. The Christian gods in comparison talk about exulting the poor, and each giving what they can in tithe. None of that shit here however. Agamemnon has all the fatted bulls, he can burn all the bones, and so he gets all the favor. The only way you can compete with him is to out-spend him:
