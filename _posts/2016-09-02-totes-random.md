@@ -12,6 +12,6 @@ So, in order to capitalize off of this bountiful resource, we set about harvesti
 
 Once we gathered some tweets we tried a few transformations on them to get a number out of them, such as adding up the ordinal values of the characters, but eventually we settled on hashing them all together. This hash is then fed though a [Mersenne Twister](https://en.wikipedia.org/wiki/Mersenne_Twister) (a pseudo-random number generator which is capable of passing something called the [Diehard tests](https://en.wikipedia.org/wiki/Diehard_tests), which includes the adorably named birthday test), and finally used to seed the native Haskell pseudo-random number generator. That's right, our seeds go though three layers of randomization. We don't skimp on quality here.
 
-<img src="./images/totes_random.png">
+<img src="http://www.jkiely.co.uk/images/totes_random.png">
 
 At current we have an API that can return to you a random number between zero and one, and optionally return the tweets that were used to generate it, although so far it's only running on my computer. I did however take the natural next step of building a [twitter bot](https://github.com/JKiely/Totes-Random-Bot) that takes numbers generated from twitter and posts them back to twitter, perhaps even seeding itself. This is also pending our public API before it's up and running properly. For now the code can be viewed [here](https://github.com/JKiely/Totes-Random).
