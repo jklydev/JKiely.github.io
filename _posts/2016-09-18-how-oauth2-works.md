@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 So until recently my understanding of how OAuth2 works has been as follows:
 
 1. Get the keys for the thing you want to oauth into.

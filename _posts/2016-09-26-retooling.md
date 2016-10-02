@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 Last night, in a fit of sleeplessness, I decided to utterly over hall all of the tools I use on my laptop: Switching from emacs to Atom (with vim mode), from Chrome to Vivaldi, and from bash to zsh. I've really only spent a day with them all so far but I'm going to report my initial impressions:
 
 Vivaldi
