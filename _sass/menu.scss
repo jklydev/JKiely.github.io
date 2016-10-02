@@ -1,0 +1,20 @@
+.menu {
+    padding: 1rem;
+}
+
+@media (min-width: 48em) {
+    .menu {
+        position: fixed;
+        float: center;
+        width: 100px;
+    }
+}
+
+.links{
+    white-space: nowrap;
+
+}
+
+.site-nav {
+    font-size: 25px;
+}
