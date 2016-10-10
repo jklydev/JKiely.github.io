@@ -9,7 +9,13 @@
 
 @media (min-width: 48em) {
     .page-content {
-        margin-left: 20rem;
+        margin-left: 100px;
+    }
+}
+
+@media (min-width: 75em) {
+    .page-content {
+        margin: 0 auto;
     }
 }
 
@@ -19,9 +25,9 @@
 
 .post-list {
     list-style: none;
-    
+
     > li {
-        margin-bottom: $spacing-unit;
+        margin-top:  $spacing-unit;
     }
 }
 

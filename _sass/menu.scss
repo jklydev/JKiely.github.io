@@ -10,10 +10,16 @@
     }
 }
 
-.links{
-    white-space: nowrap;
-
+@media (min-width: 75em) {
+    .menu {
+        position: fixed;
+        float: center;
+        width: 100px;
+        white-space: nowrap;
+    }
 }
+
+
 
 .site-nav {
     font-size: 25px;
