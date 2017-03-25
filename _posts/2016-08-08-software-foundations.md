@@ -1,8 +1,0 @@
----
-layout: post
----
-So I spent a few last this week working on [Software Foundations](https://www.cis.upenn.edu/~bcpierce/sf/current/deps.html) and I made it all the way to the third chapter... It's not exactly been easy going for me, it's really my first introduction to proofs and this kind of thinking involved, but the book has been a great guide so far.
-
-The book introduces logic, proof asstants, and functional programming as means of reasoning about the properties of programs and ensuring correctness. It's structured as a series of examples and exercies in the proof assistant Coq, and it fact it can be quite useful to read the book in a coq editor of your choice (I found proof general to be the easiest to work with). As you might guess from my slow going the exerces themselves are not easy, they are rated on a five star system, with which my expereance so far has been:  One star exerces can generally be completed with minimal thought, two star requites some thought and often take a few minutes, three stars generally take about 20 minutes, but can leave me stuck for hours, they requite a solid understanding of the prinicples involved, and four and five star which I have yet completed without help.
-
-In the past I've had some rough expereances with books that claim to assume no prior experence, but this one really does live up to its promise. I've certainly suffered as a result of not having all of the intutions that somone more experenced with proofs would have, but never so much as to block my progress. I'm looking forward to getting back to it during next week, I'm hopeing I can at least make it to the chapter analysing Imp before the end of my batch.
