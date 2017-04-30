@@ -1,7 +1,0 @@
-# Site settings
-title: J
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "jkiely.co.uk"
-
-# Build settings
-markdown: kramdown
