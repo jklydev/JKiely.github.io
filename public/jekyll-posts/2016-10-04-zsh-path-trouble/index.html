@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>  &middot; JKLY </title>
+
+
+<link rel="stylesheet" href="http://jkly.iocss/slim.css">
+<link rel="stylesheet" href="http://jkly.iocss/highlight.min.css">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+<link href="" rel="alternate" type="application/rss+xml" title="JKLY" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+  <h1 class="site-title"><a href="http://jkly.io">JKLY</a></h1>
+  <p class="site-tagline"></p>
+  <div class="nav">
+    <a class="nav-btn" href="#">
+      <span class="ci ci-burger"></span>
+    </a>
+    <ul class="nav-list">
+       
+	  <li class="spacer">&ac;</li>
+
+      <li><a href="https://github.com/jkiely">Github</a></li>  
+    </ul>
+  </div>
+</div>
+    <div class="content">
+      <div class="post">
+        <h2 class="post-title"><a href="http://jkly.io/jekyll-posts/2016-10-04-zsh-path-trouble/"></a></h2>
+        <div class="post-content">
+          <p>I&rsquo;ve been loving Zsh since switching over, but yesterday I had my first problem with it: When I tried running a python 3 program, it couldn&rsquo;t find any packages. A quick <code>exec bash -l</code> let me check that they still worked with bash, so it probably wasn&rsquo;t a python thing, but a zsh thing. It grew even stranger when it turned out that it could still find all of my old python 2 packages just fine, as well as run the 2.7 version of Ipython in the command line.</p>
+
+<p>I don&rsquo;t really understand the shell all that well yet, so this post really just describes how I went about trying to fix this using the little knowledge I do have, a lot of this might be wrong and/or unsafe. If you just want to see how I actually did solve it then skip to the second to last paragraph.</p>
+
+<p>So my first though was that this was likely to have something to do with Conda, having used that to install my python 3. My next (kinda stupid) thought was that maybe my python 3 package path (in the anaconda directory) needed to be added to my $PATH? So I checked where that was:</p>
+
+<pre><code class="language-py">import site
+site.getsitepackages() #=&gt; ['/Users/jkiely/anaconda/lib/python3.5/site-packages']
+</code></pre>
+
+<p>Added it &hellip; and of course that didn&rsquo;t work. A quick check of my path on bash showed that I didn&rsquo;t have the packages there ether. But it did show that I had the Conda python 3 in my path on bash but not on Zsh. Wait&hellip; so how was I even getting python 3 to run on zsh them? I checked <code>which python3</code> on zsh and it turns out that unbeknownst to me I had a second python 3 installation on my system in <code>/usr/local/bin</code> and when I ran python 3 it was using that.</p>
+
+<p>So that helps me a bit. I have no idea how the anaconda version ended up in my bash path but not my zsh one, since it&rsquo;s not in my bashrc, but I add it to zshrc and&hellip; nothing. It&rsquo;s still calling the wrong python. Hmm, so I think the shell uses the first binary of that name that it finds in the path right? What if I move it to the top of my &lsquo;export to path&rsquo; list? Nope, still wrong version. Ok how about I try this changing <code>PATH=$PATH:/path/to/anaconda</code> to <code>PATH=/path/to/anaconda/:$PATH</code> ensuring that it&rsquo;s added to the front of the path regardless of when it&rsquo;s exported. And&hellip; it works!</p>
+
+<p>This solution feels a bit hacky, and I&rsquo;m pretty sure that the right way to solve it, and thus the next step, is to figure out how to use virtual environments to specify exactly what version of python I want use with each project. But for now I&rsquo;m glad I can at run python 3 programs at all.</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+  
+  <p>Powered by <a href="http://gohugo.io">Hugo</a>. This theme—Slim—is open sourced on <a href="https://github.com/zhe/hugo-theme-slim">Github</a>.</p>
+  
+</div>
+
+  </div>
+  <script src="http://jkly.iojs/slim.js"></script>
+  
+
+</body>
+
+</html>
