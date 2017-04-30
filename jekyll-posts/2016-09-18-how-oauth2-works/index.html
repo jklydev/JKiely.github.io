@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>  &middot; JKLY </title>
+
+
+<link rel="stylesheet" href="http://jkiely.co.ukcss/slim.css">
+<link rel="stylesheet" href="http://jkiely.co.ukcss/highlight.min.css">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+<link href="" rel="alternate" type="application/rss+xml" title="JKLY" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+  <h1 class="site-title"><a href="http://jkiely.co.uk">JKLY</a></h1>
+  <p class="site-tagline"></p>
+  <div class="nav">
+    <a class="nav-btn" href="#">
+      <span class="ci ci-burger"></span>
+    </a>
+    <ul class="nav-list">
+       
+	  <li class="spacer">&ac;</li>
+
+      <li><a href="https://github.com/jkiely">Github</a></li>  
+    </ul>
+  </div>
+</div>
+    <div class="content">
+      <div class="post">
+        <h2 class="post-title"><a href="http://jkiely.co.uk/jekyll-posts/2016-09-18-how-oauth2-works/"></a></h2>
+        <div class="post-content">
+          
+
+<p>So until recently my understanding of how OAuth2 works has been as follows:</p>
+
+<ol>
+<li>Get the keys for the thing you want to oauth into.</li>
+<li>Get the gem/package for oauthing into that particular thing.</li>
+<li>Done.</li>
+</ol>
+
+<p>However, recently I wanted to use the Recurse Center API for oauthing, which didn&rsquo;t have any of those convenient packages that I&rsquo;m use to having do all of the work for me. I was working in Go, and so I still had the <a href="https://github.com/golang/oauth2">Go OAuth2 package</a> to do <em>most</em> of the work for me, but it seemed that if I was going to dig into this at all I might as well learn how it actually works. So here is what I know about how OAuth2 works so far:</p>
+
+<h3 id="step-1-register-your-application">Step 1: Register your application</h3>
+
+<p>Regardless of what packages you&rsquo;re using you still need the service to actually know about you, so go to wherever you need to go to register and get a Client ID and a Client Secret code. As you can probably guess from the names, the Client ID will be public knowledge, while the Client Secret will (should) be known only to you and the site you&rsquo;re authing with.</p>
+
+<h3 id="step-2-redirect-you-user-to-the-service-auth-url">Step 2: Redirect you user to the service Auth URL</h3>
+
+<p>So now you have an app, some other site knows about your app, and you have a user trying to log in via that other site, how do you get them authed? First you need to redirect them to the other sites Auth end point (maybe something like example.com/oauth/auth), you need to include two things as params with this redirect: Your Client ID, so they know who sent you, and the url you want the site to redirect you user back to after they give permission.</p>
+
+<p>There are also three other parameters you can choose to specify or not: Firstly you can give a state string, is is typically a short string of random character that the authing site will return unmodified. The purpose of this is to protect against <a href="https://tools.ietf.org/html/rfc6749#section-10.12">Cross-Site Request Forgery</a>, and it can be a random value that you store per user session, a hash of the users information, or some other value tied to a given user. It ensures then when the client is redirected back to your site (step three) that the request actually originated from that user on your site, and not a third party who has tricked them into following a link (look <a href="http://security.stackexchange.com/a/57886">here</a> for more information). Secondly you can set the scope, telling the service that you only want to access parts of this users account, for example checking their identity but not reading their email. Thirdly there is the response type. OK so this isn&rsquo;t actually optional but it is pretty much always set to code, some non-standard OAuth methods allow you to set this to token and get the token immediately without any of the following steps (But with some additional preceding ones, such as making a post request with the username and password).</p>
+
+<p>So in the end your request will end up looking something like this: <code>site.com/oauth2/auth?client_id=foobar&amp;redirect_uri=myapp.com/site_redirect&amp;scope=public&amp;state=SOMESHAHASH</code></p>
+
+<p>Once the user reaches this site, they can choose to log in and give you permission to access their data (or not).</p>
+
+<h3 id="step-3-get-the-auth-token-from-the-token-endpoint">Step 3: Get the auth token from the token endpoint</h3>
+
+<p>Assuming the user gives you app permission to access their data, the site should then redirect them back to the url you provide, along with the authorization code and the state string you provided as parameters. As mentioned above, the first thing you should do is check the state string. If that checks out, then you need to grab the code from the params and make a request to the site&rsquo;s token url. This time the request goes directly from your server to the site&rsquo;s server, without the user doing anything. In the parameters of the request you should include both the code and your shared secret. If the code and the Client Secret both check out then the site should provide you with four things: Firstly the access token that you can use to do whatever the site has now authorized you to do, secondly the type of token they have granted you (usually just of type &lsquo;token&rsquo;), thirdly the refresh token that you can use to generate a new access token if it expires, and finally how long until it expires (which can be set to zero in the case that it never expires).</p>
+
+<h3 id="summary">Summary</h3>
+
+<p>So if a users wants to OAuth into you app via another site, you have to send them to that site with some information on who you are and what you want to do. They then need to tell the site it&rsquo;s OK for you to access their data, and the site will send them back with a code confirming that you have their permission to access their data. Your app then takes that code and goes directly to the other site, where you confirm you are who you say you are and show them the code that confirms you&rsquo;re allowed to access what you say you&rsquo;re allowed to access. The site then give you a token that gives you permission to do whatever that is on behalf of the user.</p>
+
+<p>There are still some parts I don&rsquo;t understand, for example what exactly to do with the refresh token. But all in all I think I have the gist of it. As part of this learning effort I build a wrapper around the RC API in Go, to make other lives easier in the future. You can see the code for that <a href="https://github.com/JKiely/RC-API">here</a>.</p>
+
+<h3 id="sources">Sources:</h3>
+
+<ul>
+<li><a href="http://stackoverflow.com/a/32534239/3878507">This</a> Stack Overflow answer gave me the high level context to understand what was going on.</li>
+<li><a href="https://gist.github.com/mziwisky/10079157">This</a> give a bit more detail.</li>
+<li>The <a href="https://godoc.org/golang.org/x/oauth2">Go OAuth2 Docs</a> and reading <a href="https://github.com/golang/oauth2">the code itself</a> helped me understand what was happening on a technical level.</li>
+<li>Where I still didn&rsquo;t get it I looked at the <a href="https://tools.ietf.org/html/rfc6749">official spec</a>, which is surprisingly readable!</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+  
+  <p>Powered by <a href="http://gohugo.io">Hugo</a>. This theme—Slim—is open sourced on <a href="https://github.com/zhe/hugo-theme-slim">Github</a>.</p>
+  
+</div>
+
+  </div>
+  <script src="http://jkiely.co.ukjs/slim.js"></script>
+  
+
+</body>
+
+</html>
