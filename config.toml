@@ -1,3 +1,6 @@
 languageCode = "en-uk"
 title = "JKLY"
 baseurl = "http://jkly.io"
+theme = "hugo-theme-slim"
+[params]
+    GithubID = "jkiely"
