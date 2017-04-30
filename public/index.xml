@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JKLY</title>
-    <link>http://jkly.io/index.xml</link>
+    <link>http://jkiely.co.uk/index.xml</link>
     <description>Recent content on JKLY</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://jkly.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jkiely.co.uk/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Things I Read In January</title>
-      <link>http://jkly.io/post/Things%20I%20Read%20In%20January/</link>
+      <link>http://jkiely.co.uk/post/Things%20I%20Read%20In%20January/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/post/Things%20I%20Read%20In%20January/</guid>
+      <guid>http://jkiely.co.uk/post/Things%20I%20Read%20In%20January/</guid>
       <description>
 
 &lt;h1 id=&#34;books&#34;&gt;Books&lt;/h1&gt;
@@ -112,10 +112,10 @@
     
     <item>
       <title>Books I Read In 2016</title>
-      <link>http://jkly.io/post/Books%20I%20Read%20In%202016/</link>
+      <link>http://jkiely.co.uk/post/Books%20I%20Read%20In%202016/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/post/Books%20I%20Read%20In%202016/</guid>
+      <guid>http://jkiely.co.uk/post/Books%20I%20Read%20In%202016/</guid>
       <description>
 
 &lt;p&gt;I though it might be nice to recap the year with a list of the books I&amp;rsquo;ve read. Before I sat down to start writing I was expecting this list to be a lot shorter, and I was plesently supprised! But I still hope to make it longer next year!&lt;/p&gt;
@@ -188,10 +188,10 @@
     
     <item>
       <title>Zsh Path Trouble</title>
-      <link>http://jkly.io/post/Zsh%20Path%20Trouble/</link>
+      <link>http://jkiely.co.uk/post/Zsh%20Path%20Trouble/</link>
       <pubDate>Tue, 04 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/post/Zsh%20Path%20Trouble/</guid>
+      <guid>http://jkiely.co.uk/post/Zsh%20Path%20Trouble/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been loving Zsh since switching over, but yesterday I had my first problem with it: When I tried running a python 3 program, it couldn&amp;rsquo;t find any packages. A quick &lt;code&gt;exec bash -l&lt;/code&gt; let me check that they still worked with bash, so it probably wasn&amp;rsquo;t a python thing, but a zsh thing. It grew even stranger when it turned out that it could still find all of my old python 2 packages just fine, as well as run the 2.7 version of Ipython in the command line.&lt;/p&gt;
 
 &lt;p&gt;I don&amp;rsquo;t really understand the shell all that well yet, so this post really just describes how I went about trying to fix this using the little knowledge I do have, a lot of this might be wrong and/or unsafe. If you just want to see how I actually did solve it then skip to the second to last paragraph.&lt;/p&gt;
@@ -212,10 +212,10 @@ site.getsitepackages() #=&amp;gt; [&#39;/Users/jkiely/anaconda/lib/python3.5/sit
     
     <item>
       <title>How Oauth2 Works</title>
-      <link>http://jkly.io/post/How%20Oauth2%20Works/</link>
+      <link>http://jkiely.co.uk/post/How%20Oauth2%20Works/</link>
       <pubDate>Sun, 18 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/post/How%20Oauth2%20Works/</guid>
+      <guid>http://jkiely.co.uk/post/How%20Oauth2%20Works/</guid>
       <description>
 
 &lt;p&gt;So until recently my understanding of how OAuth2 works has been as follows:&lt;/p&gt;
@@ -265,10 +265,10 @@ site.getsitepackages() #=&amp;gt; [&#39;/Users/jkiely/anaconda/lib/python3.5/sit
     
     <item>
       <title>Totes Random</title>
-      <link>http://jkly.io/post/Totes%20Random/</link>
+      <link>http://jkiely.co.uk/post/Totes%20Random/</link>
       <pubDate>Fri, 02 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/post/Totes%20Random/</guid>
+      <guid>http://jkiely.co.uk/post/Totes%20Random/</guid>
       <description>&lt;p&gt;So it turns out that Haskell doesn&amp;rsquo;t have a random number generator in the same sense python does, one that can be called at any time and return a float between 0 and 1, instead it has a generator which needs a seed in order to produce a number. Naturally the same seed results in the same output each time, making it a little tricky to write a program which requires generating a lot of random numbers. After running into this problem while building the sudoku solver, me, &lt;a href=&#34;https://github.com/phasedchirp&#34;&gt;Sean&lt;/a&gt;, and &lt;a href=&#34;https://github.com/tayloraburgess&#34;&gt;Taylor&lt;/a&gt; got talking and we had an idea&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;Typically RNGs are seeded with unpredictable events such as radioactive decay, or &lt;a href=&#34;https://www.random.org/&#34;&gt;atmospheric noise&lt;/a&gt;. And while we don&amp;rsquo;t have access to that, we do know of a source of noise that&amp;rsquo;s available to everyone, Twitter!&lt;/p&gt;
@@ -289,10 +289,10 @@ site.getsitepackages() #=&amp;gt; [&#39;/Users/jkiely/anaconda/lib/python3.5/sit
     
     <item>
       <title>Kill Your Darlings</title>
-      <link>http://jkly.io/post/Kill%20Your%20Darlings/</link>
+      <link>http://jkiely.co.uk/post/Kill%20Your%20Darlings/</link>
       <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/post/Kill%20Your%20Darlings/</guid>
+      <guid>http://jkiely.co.uk/post/Kill%20Your%20Darlings/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;“kill your darlings, kill your darlings, even when it breaks your egocentric little scribbler’s heart, kill your darlings”&lt;/p&gt;
 
@@ -311,10 +311,10 @@ site.getsitepackages() #=&amp;gt; [&#39;/Users/jkiely/anaconda/lib/python3.5/sit
     
     <item>
       <title>Occupy Olympus</title>
-      <link>http://jkly.io/post/Occupy%20Olympus/</link>
+      <link>http://jkiely.co.uk/post/Occupy%20Olympus/</link>
       <pubDate>Mon, 18 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/post/Occupy%20Olympus/</guid>
+      <guid>http://jkiely.co.uk/post/Occupy%20Olympus/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been a few year since I last read The Iliad, but I still think about the book a lot. It&amp;rsquo;s central conflict between living a long leisurely life for which you are hardly remembered, or living a short brutal one that may grant you &amp;ldquo;Kleos Aphthiton&amp;rdquo;&lt;sup&gt;[1]&lt;/sup&gt; really caught my interest when I first read it and never really let go.&lt;/p&gt;
 
 &lt;p&gt;Still, another feature of the book that grabbed me was just how damn capitalist the gods are. The Christian gods in comparison talk about exulting the poor, and each giving what they can in tithe. None of that shit here however. Agamemnon has all the fatted bulls, he can burn all the bones, and so he gets all the favor. The only way you can compete with him is to out-spend him:&lt;/p&gt;
@@ -336,10 +336,10 @@ site.getsitepackages() #=&amp;gt; [&#39;/Users/jkiely/anaconda/lib/python3.5/sit
     
     <item>
       <title>Markov Journal</title>
-      <link>http://jkly.io/post/Markov%20Journal/</link>
+      <link>http://jkiely.co.uk/post/Markov%20Journal/</link>
       <pubDate>Fri, 17 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/post/Markov%20Journal/</guid>
+      <guid>http://jkiely.co.uk/post/Markov%20Journal/</guid>
       <description>&lt;p&gt;So for a while now I&amp;rsquo;ve been keeping a journal using Emacs Org Journal, mostly to chronicle various ideas and to shout at myself. I&amp;rsquo;ve had a few problems with it, but I&amp;rsquo;m mostly quite satisfied, and in contrast to my previous journal tools I love having everything easily accessible in plain text. In fact I was inspired by a friends project to take advantage of this accessibility and use it as a corpus to try and generate automatic journal-like sentences. I thought this project might teach me a little bit about myself, but I was apprehensive since whatever it would teach me was likely to be &lt;em&gt;horrifically&lt;/em&gt; depressing.&lt;/p&gt;
 
 &lt;p&gt;So I thought I&amp;rsquo;d start out with a simple bigram Markov model. And while I know there are plenty of libraries that implement this for me I&amp;rsquo;ve never worked with these kind of things before so I wanted to implement it myself in order to learn more about them. This was my first attempt:&lt;/p&gt;
@@ -380,10 +380,10 @@ site.getsitepackages() #=&amp;gt; [&#39;/Users/jkiely/anaconda/lib/python3.5/sit
     
     <item>
       <title>Hookup Graph</title>
-      <link>http://jkly.io/jekyll-posts/2016-04-18-hookup-graph/</link>
+      <link>http://jkiely.co.uk/jekyll-posts/2016-04-18-hookup-graph/</link>
       <pubDate>Mon, 18 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/jekyll-posts/2016-04-18-hookup-graph/</guid>
+      <guid>http://jkiely.co.uk/jekyll-posts/2016-04-18-hookup-graph/</guid>
       <description>&lt;p&gt;Do you ever look at a stranger, someone in the street or on the internet, and wonder how many hookups separate the two of you? I do.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve been wondering what a graph of the world sexual encounters would look like, a graph in which every person was a node and every sexual encounter was an edge. (And let&amp;rsquo;s be as broad and inclusive as possible in our definition of sexual encounter, I won&amp;rsquo;t try to state a thorough definition here but at the very least it should include mouth and hand stuff.)&lt;/p&gt;
@@ -402,10 +402,10 @@ site.getsitepackages() #=&amp;gt; [&#39;/Users/jkiely/anaconda/lib/python3.5/sit
     
     <item>
       <title>Hookup Graph</title>
-      <link>http://jkly.io/post/Hookup%20Graph/</link>
+      <link>http://jkiely.co.uk/post/Hookup%20Graph/</link>
       <pubDate>Mon, 18 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/post/Hookup%20Graph/</guid>
+      <guid>http://jkiely.co.uk/post/Hookup%20Graph/</guid>
       <description>&lt;p&gt;Do you ever look at a stranger, someone in the street or on the internet, and wonder how many hookups separate the two of you? I do.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve been wondering what a graph of the world sexual encounters would look like, a graph in which every person was a node and every sexual encounter was an edge. (And let&amp;rsquo;s be as broad and inclusive as possible in our definition of sexual encounter, I won&amp;rsquo;t try to state a thorough definition here but at the very least it should include mouth and hand stuff.)&lt;/p&gt;
@@ -424,10 +424,10 @@ site.getsitepackages() #=&amp;gt; [&#39;/Users/jkiely/anaconda/lib/python3.5/sit
     
     <item>
       <title>I&#39;m going to the Recurse Center</title>
-      <link>http://jkly.io/jekyll-posts/2016-04-15-recurse-center/</link>
+      <link>http://jkiely.co.uk/jekyll-posts/2016-04-15-recurse-center/</link>
       <pubDate>Fri, 15 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/jekyll-posts/2016-04-15-recurse-center/</guid>
+      <guid>http://jkiely.co.uk/jekyll-posts/2016-04-15-recurse-center/</guid>
       <description>&lt;p&gt;Holy Fucking Shit I&amp;rsquo;m going to the Recurse Center!&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What is the Recurse Center?&lt;/strong&gt; Well it&amp;rsquo;s kind of a writers retreat for programmers, a place you can go to work on whatever you want for three months and with support and guidance from some fantastic people and a brillient community. It&amp;rsquo;s completely free, they make their money by getting jobs for the alumni and charging the companies a recrutment fee, which is a win win for me. Oh! And they&amp;rsquo;re based in New York!&lt;/p&gt;
@@ -441,10 +441,10 @@ It&amp;rsquo;s going to be a great journey!&lt;/p&gt;
     
     <item>
       <title>Recurse Center</title>
-      <link>http://jkly.io/post/Recurse%20Center/</link>
+      <link>http://jkiely.co.uk/post/Recurse%20Center/</link>
       <pubDate>Fri, 15 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/post/Recurse%20Center/</guid>
+      <guid>http://jkiely.co.uk/post/Recurse%20Center/</guid>
       <description>&lt;p&gt;Holy Fucking Shit I&amp;rsquo;m going to the Recurse Center!&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What is the Recurse Center?&lt;/strong&gt; Well it&amp;rsquo;s kind of a writers retreat for programmers, a place you can go to work on whatever you want for three months and with support and guidance from some fantastic people and a brillient community. It&amp;rsquo;s completely free, they make their money by getting jobs for the alumni and charging the companies a recrutment fee, which is a win win for me. Oh! And they&amp;rsquo;re based in New York!&lt;/p&gt;
@@ -458,10 +458,10 @@ It&amp;rsquo;s going to be a great journey!&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://jkly.io/jekyll-posts/2016-06-17-markov-journal/</link>
+      <link>http://jkiely.co.uk/jekyll-posts/2016-06-17-markov-journal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/jekyll-posts/2016-06-17-markov-journal/</guid>
+      <guid>http://jkiely.co.uk/jekyll-posts/2016-06-17-markov-journal/</guid>
       <description>&lt;p&gt;So for a while now I&amp;rsquo;ve been keeping a journal using Emacs Org Journal, mostly to chronicle various ideas and to shout at myself. I&amp;rsquo;ve had a few problems with it, but I&amp;rsquo;m mostly quite satisfied, and in contrast to my previous journal tools I love having everything easily accessible in plain text. In fact I was inspired by a friends project to take advantage of this accessibility and use it as a corpus to try and generate automatic journal-like sentences. I thought this project might teach me a little bit about myself, but I was apprehensive since whatever it would teach me was likely to be &lt;em&gt;horrifically&lt;/em&gt; depressing.&lt;/p&gt;
 
 &lt;p&gt;So I thought I&amp;rsquo;d start out with a simple bigram Markov model. And while I know there are plenty of libraries that implement this for me I&amp;rsquo;ve never worked with these kind of things before so I wanted to implement it myself in order to learn more about them. This was my first attempt:&lt;/p&gt;
@@ -502,10 +502,10 @@ It&amp;rsquo;s going to be a great journey!&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://jkly.io/jekyll-posts/2016-07-18-occupy-olympus/</link>
+      <link>http://jkiely.co.uk/jekyll-posts/2016-07-18-occupy-olympus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/jekyll-posts/2016-07-18-occupy-olympus/</guid>
+      <guid>http://jkiely.co.uk/jekyll-posts/2016-07-18-occupy-olympus/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been a few year since I last read The Iliad, but I still think about the book a lot. It&amp;rsquo;s central conflict between living a long leisurely life for which you are hardly remembered, or living a short brutal one that may grant you &amp;ldquo;Kleos Aphthiton&amp;rdquo;&lt;sup&gt;[1]&lt;/sup&gt; really caught my interest when I first read it and never really let go.&lt;/p&gt;
 
 &lt;p&gt;Still, another feature of the book that grabbed me was just how damn capitalist the gods are. The Christian gods in comparison talk about exulting the poor, and each giving what they can in tithe. None of that shit here however. Agamemnon has all the fatted bulls, he can burn all the bones, and so he gets all the favor. The only way you can compete with him is to out-spend him:&lt;/p&gt;
@@ -527,10 +527,10 @@ It&amp;rsquo;s going to be a great journey!&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://jkly.io/jekyll-posts/2016-08-17-kill-your-darlings/</link>
+      <link>http://jkiely.co.uk/jekyll-posts/2016-08-17-kill-your-darlings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://jkly.io/jekyll-posts/2016-08-17-kill-your-darlings/</guid>
+      <guid>http://jkiely.co.uk/jekyll-posts/2016-08-17-kill-your-darlings/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;“kill your darlings, kill your darlings, even when it breaks your egocentric little scribbler’s heart, kill your darlings”&lt;/p&gt;
 
