@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://jkly.io/post/Things%20I%20Read%20In%20January/</loc>
+    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/post/Books%20I%20Read%20In%202016/</loc>
+    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/post/Zsh%20Path%20Trouble/</loc>
+    <lastmod>2016-10-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/post/How%20Oauth2%20Works/</loc>
+    <lastmod>2016-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/post/Totes%20Random/</loc>
+    <lastmod>2016-09-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/post/Kill%20Your%20Darlings/</loc>
+    <lastmod>2016-08-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/post/Occupy%20Olympus/</loc>
+    <lastmod>2016-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/post/Markov%20Journal/</loc>
+    <lastmod>2016-06-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/jekyll-posts/2016-04-18-hookup-graph/</loc>
+    <lastmod>2016-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/post/Hookup%20Graph/</loc>
+    <lastmod>2016-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/jekyll-posts/2016-04-15-recurse-center/</loc>
+    <lastmod>2016-04-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/post/Recurse%20Center/</loc>
+    <lastmod>2016-04-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/jekyll-posts/2016-06-17-markov-journal/</loc>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/jekyll-posts/2016-07-18-occupy-olympus/</loc>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/jekyll-posts/2016-08-17-kill-your-darlings/</loc>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/jekyll-posts/2016-09-02-totes-random/</loc>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/jekyll-posts/2016-09-18-how-oauth2-works/</loc>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/jekyll-posts/2016-10-04-zsh-path-trouble/</loc>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/jekyll-posts/2017-01-01-books-i-read-in-2016/</loc>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/jekyll-posts/2017-02-02-things-i-read-in-january/</loc>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/</loc>
+    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/jekyll-posts/</loc>
+    <lastmod>2016-04-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jkly.io/post/</loc>
+    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
