@@ -7,12 +7,10 @@ adir = "./post/"
 
 titles = os.listdir(bdir)
 
-dicts = [
-            {
-                'file_name': name,
-                'text': open((bdir + name)).read()
-            } for name in titles
-        ]
+dicts = [{
+            'file_name': name,
+            'text': open((bdir + name)).read()
+        } for name in titles]
 
 for d in dicts:
     try:
@@ -29,8 +27,7 @@ for d in dicts:
     d['header'] = "+++\ndate = \"{}\"\ntitle = \"{}\"\n\n+++\n\n".format(
             d['date'],
             d['name']
-            )
-
+    )
 
 for d in dicts:
     f = open((adir + d['name'] + '.md'), 'w')
