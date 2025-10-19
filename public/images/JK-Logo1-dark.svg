@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 223.73 94.5">
+  <ns0:defs>
+    <ns0:style>
+      .cls-1 {
+        fill:#FFFFFF;
+      }
+    </ns0:style>
+  </ns0:defs>
+  <ns0:path class="cls-1" d="M0,94.5v-61.5h25.18v33.14h5.07V28.36H0V0h55.28v94.5H0Z" />
+  <ns0:path class="cls-1" d="M89.57,94.5v-33.28h-4.78v33.28h-25.18V0h25.18v32.99h4.78V0h25.32v44.86h-15.2v4.49h15.2v45.15h-25.32Z" />
+  <ns0:path class="cls-1" d="M191.14,61.21v33.28h-25.04v-33.28h-15.05V0h25.18v32.99h4.78V0h25.32v61.21h-15.2Z" />
+  <ns0:polygon class="cls-1" points="146.99 65.87 146.99 0 144.41 0 142.28 0 119.24 0 119.24 94.5 161.49 94.5 161.49 66.53 161.49 66.13 161.49 65.87 146.99 65.87" />
+  <ns0:polygon class="cls-1" points="195.1 65.53 195.1 65.87 195.1 66.2 195.1 94.5 223.73 94.5 223.73 66.2 223.73 65.87 223.73 65.53 195.1 65.53" />
+</ns0:svg>

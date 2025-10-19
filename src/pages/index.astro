@@ -40,8 +40,19 @@ const posts = (await getCollection('blog'))
       }
 
       h1 {
-        font-size: clamp(2.5rem, 5vw, 3.5rem);
-        margin-bottom: 0.5rem;
+        margin: 0 0 1.5rem;
+        font-size: 0;
+      }
+
+      .logo {
+        display: inline-flex;
+        width: clamp(9rem, 30vw, 12rem);
+      }
+
+      .logo img {
+        width: 100%;
+        height: auto;
+        display: block;
       }
 
       h2 {
@@ -70,7 +81,13 @@ const posts = (await getCollection('blog'))
   </head>
   <body>
     <header>
-      <h1>JKLY</h1>
+      <h1>
+        <picture class="logo">
+          <source srcset="/images/JK-Logo1-light.svg" media="(prefers-color-scheme: light)" />
+          <source srcset="/images/JK-Logo1-dark.svg" media="(prefers-color-scheme: dark)" />
+          <img src="/images/JK-Logo1-dark.svg" alt="JKLY" />
+        </picture>
+      </h1>
       <p>A clean slate for notes, experiments, and longer writing.</p>
     </header>
 
