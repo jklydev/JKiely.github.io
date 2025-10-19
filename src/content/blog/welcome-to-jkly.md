@@ -1,6 +1,6 @@
 ---
 title: "Welcome to the JKLY Astro Blog"
-description: "Introducing the new Astro-powered home for JKLY."
+description: ""
 publishDate: 2025-10-19
 updatedDate: 2025-10-19
 ---

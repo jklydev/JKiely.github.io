@@ -39,12 +39,6 @@ const posts = (await getCollection('blog'))
         margin-bottom: 3rem;
       }
 
-      nav {
-        display: flex;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-
       h1 {
         font-size: clamp(2.5rem, 5vw, 3.5rem);
         margin-bottom: 0.5rem;
@@ -78,10 +72,6 @@ const posts = (await getCollection('blog'))
     <header>
       <h1>JKLY</h1>
       <p>A clean slate for notes, experiments, and longer writing.</p>
-      <nav>
-        <a href="https://github.com/JKiely">GitHub</a>
-        <a href="/rss.xml">RSS</a>
-      </nav>
     </header>
 
     <main>
@@ -103,7 +93,7 @@ const posts = (await getCollection('blog'))
                     })}
                   </time>
                 </header>
-                <p>{post.data.description}</p>
+                {post.data.description && <p>{post.data.description}</p>}
               </article>
             </li>
           ))}
