@@ -1,0 +1,118 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JKLY — Notes and Observations</title>
+    <meta
+      name="description"
+      content="The JKLY blog, rebuilt with Astro and ready for future posts."
+    />
+    <link rel="alternate" type="application/rss+xml" title="JKLY RSS" href="/rss.xml" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #0b0b0b;
+        color: #f8f8f8;
+      }
+
+      body {
+        margin: 0 auto;
+        max-width: 48rem;
+        padding: 4rem 1.5rem 6rem;
+        line-height: 1.75;
+      }
+
+      a {
+        color: #7fd1ff;
+      }
+
+      header {
+        margin-bottom: 3rem;
+      }
+
+      nav {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        margin-bottom: 0.5rem;
+      }
+
+      h2 {
+        margin-bottom: 0.25rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 1.75rem;
+      }
+
+      time {
+        font-size: 0.9rem;
+        color: #a0a0a0;
+      }
+
+      footer {
+        margin-top: 5rem;
+        font-size: 0.875rem;
+        color: #8a8a8a;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>JKLY</h1>
+      <p>A clean slate for notes, experiments, and longer writing.</p>
+      <nav>
+        <a href="https://github.com/JKiely">GitHub</a>
+        <a href="/rss.xml">RSS</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Latest writing</h2>
+        <ul>
+          {posts.map((post) => (
+            <li>
+              <article>
+                <header>
+                  <h3>
+                    <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+                  </h3>
+                  <time dateTime={post.data.publishDate.toISOString()}>
+                    {post.data.publishDate.toLocaleDateString(undefined, {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </time>
+                </header>
+                <p>{post.data.description}</p>
+              </article>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with Astro. Deployed with GitHub Pages.</p>
+    </footer>
+  </body>
+</html>

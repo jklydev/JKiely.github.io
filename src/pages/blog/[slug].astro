@@ -1,0 +1,100 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{post.data.title} — JKLY</title>
+    <meta name="description" content={post.data.description} />
+    <link rel="alternate" type="application/rss+xml" title="JKLY RSS" href="/rss.xml" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #0b0b0b;
+        color: #f8f8f8;
+      }
+
+      body {
+        margin: 0 auto;
+        max-width: 48rem;
+        padding: 4rem 1.5rem 6rem;
+        line-height: 1.75;
+      }
+
+      a {
+        color: #7fd1ff;
+      }
+
+      header {
+        margin-bottom: 2.5rem;
+      }
+
+      h1 {
+        font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+        margin-bottom: 0.75rem;
+      }
+
+      time {
+        font-size: 0.95rem;
+        color: #a0a0a0;
+      }
+
+      article :global(p) {
+        margin-bottom: 1.5rem;
+      }
+
+      footer {
+        margin-top: 4rem;
+        font-size: 0.875rem;
+        color: #8a8a8a;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/">← Back to home</a>
+      <h1>{post.data.title}</h1>
+      <time dateTime={post.data.publishDate.toISOString()}>
+        Published {post.data.publishDate.toLocaleDateString(undefined, {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })}
+      </time>
+      {post.data.updatedDate && (
+        <div>
+          <time dateTime={post.data.updatedDate.toISOString()}>
+            Updated {post.data.updatedDate.toLocaleDateString(undefined, {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </time>
+        </div>
+      )}
+    </header>
+
+    <article>
+      <Content />
+    </article>
+
+    <footer>
+      <a href="/rss.xml">Subscribe via RSS</a>
+    </footer>
+  </body>
+</html>

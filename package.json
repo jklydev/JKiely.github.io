@@ -1,0 +1,16 @@
+{
+  "name": "jkly-astro",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.3",
+    "astro": "^4.10.2"
+  }
+}
